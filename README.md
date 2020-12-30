@@ -23,5 +23,20 @@ WindowGroup { /* ... */ }
 ![](previews/1-4.png)
 
 
+## TitleBarWindowStyle()
+
+### DefaultWindowToolbarStyle()
+![](previews/2-1.png)
+
+### UnifiedWindowToolbarStyle()
+![](previews/2-2.png)
+
+### ExpandedWindowToolbarStyle()
+![](previews/2-3.png)
+
+### UnifiedCompactWindowToolbarStyle()
+![](previews/2-4.png)
+
+
 ## 🌀 Support me
 I’m Martin, an indie dev from Berlin. If you find Uberabout useful, please consider to support my work! You can find some great apps of mine on the [Mac App Store](https://apps.apple.com/developer/id955848754) 🌀
