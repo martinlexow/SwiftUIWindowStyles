@@ -1,13 +1,19 @@
 # SwiftUI .windowStyle() .windowToolbarStyle()
 
-Showcase of window and toolbar style combinations possible with SwiftUI on macOS. Please make a pull request if you have a style to add!
+Showcase of window and toolbar style combinations possible with SwiftUI on macOS.
 
-Add the `.windowStyle()` and `.windowToolbarStyle()` modifiers to `WindowGroup` within you `App` struct: 
+**→ How to use:** Add the `.windowStyle()` and `.windowToolbarStyle()` modifiers to `WindowGroup` within you `App` struct: 
 ```swift
 WindowGroup { /* ... */ }
   .windowStyle(DefaultWindowStyle())
   .windowToolbarStyle(DefaultWindowToolbarStyle())
 ```
+
+Take a look at the included [SwiftUI file](https://github.com/martinlexow/SwiftUIWindowStyles/blob/main/SwiftUIWindowStylesApp.swift) to see how to create the toolbar etc.
+
+If you are an AppKit developer you might find this helpful as well: [NSWindowStyles](https://github.com/lukakerr/NSWindowStyles).
+
+Please make a pull request if you have a style to add.
 
 ## DefaultWindowStyle()
 
@@ -54,5 +60,5 @@ WindowGroup { /* ... */ }
 ![](previews/3-4.png)
 
 
-## 🌀 Support me
+## 🌀 Support
 I’m Martin, an indie dev from Berlin. If you find Uberabout useful, please consider to support my work! You can find some great apps of mine on the [Mac App Store](https://apps.apple.com/developer/id955848754) 🌀
