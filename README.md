@@ -1,6 +1,8 @@
-# SwiftUI .windowStyle .toolbarStyle
+# SwiftUI .windowStyle() .toolbarStyle()
 
 Showcase of window and toolbar style combinations possible with SwiftUI on macOS. Please make a pull request if you have a style to add!
+
+## DefaultWindowStyle()
 
 ```swift
 WindowGroup { /* ... */ }
