@@ -1,7 +1,8 @@
-# SwiftUI .windowStyle() .toolbarStyle()
+# SwiftUI .windowStyle() .windowToolbarStyle()
 
 Showcase of window and toolbar style combinations possible with SwiftUI on macOS. Please make a pull request if you have a style to add!
 
+Add the `.windowStyle()` and `.windowToolbarStyle()` modifiers to `WindowGroup` within you `App` struct: 
 ```swift
 WindowGroup { /* ... */ }
   .windowStyle(DefaultWindowStyle())
@@ -36,6 +37,21 @@ WindowGroup { /* ... */ }
 
 ### UnifiedCompactWindowToolbarStyle()
 ![](previews/2-4.png)
+
+
+## HiddenTitleBarWindowStyle()
+
+### DefaultWindowToolbarStyle()
+![](previews/3-1.png)
+
+### UnifiedWindowToolbarStyle()
+![](previews/3-2.png)
+
+### ExpandedWindowToolbarStyle()
+![](previews/3-3.png)
+
+### UnifiedCompactWindowToolbarStyle()
+![](previews/3-4.png)
 
 
 ## 🌀 Support me
