@@ -9,9 +9,18 @@ WindowGroup { /* ... */ }
 ```
 
 ## DefaultWindowStyle()
-### DefaultWindowToolbarStyle()
 
+### DefaultWindowToolbarStyle()
 ![](previews/1-1.png)
+
+### UnifiedWindowToolbarStyle()
+![](previews/1-2.png)
+
+### ExpandedWindowToolbarStyle()
+![](previews/1-3.png)
+
+### UnifiedCompactWindowToolbarStyle()
+![](previews/1-4.png)
 
 
 ## 🌀 Support me
