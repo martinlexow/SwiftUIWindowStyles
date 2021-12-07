@@ -11,97 +11,124 @@ struct SwiftUIWindowStylesApp: App {
         WindowGroup {
             
             VStack {
-                
-                Spacer()
-                
-                HStack(alignment: .center, spacing: .zero) {
-                    Text(".windowStyle(")
-                    Text("DefaultWindowStyle()").fontWeight(.semibold).foregroundColor(.blue)
-                    Text(")")
+                Color.accentColor.frame(height: 180.0)
+                    .overlay(Text(verbatim: "some_content_below_titlebar")
+                                .foregroundColor(.white).opacity(0.42)
+                                .rotationEffect(Angle(degrees: -9.0))
+                                .offset(y: 23.0))
+                VStack(alignment: .leading) {
+                    Text(verbatim: ".windowStyle(") + Text(verbatim: ".titleBar").fontWeight(.bold) + Text(verbatim: ")")
+                    Text(verbatim: ".windowToolbarStyle(") + Text(verbatim: ".unified").fontWeight(.bold) + Text(verbatim: ")")
+                    Spacer()
                 }
-                
-                HStack(alignment: .center, spacing: .zero) {
-                    Text(".windowToolbarStyle(")
-                    Text("DefaultWindowToolbarStyle()").fontWeight(.semibold).foregroundColor(.pink)
-                    Text(")")
-                }
-                
-                Spacer()
-                
+                .padding([.top], 42.0)
+                .foregroundColor(.accentColor)
+                .font(Font.system(size: 23.0, weight: .regular, design: .monospaced))
             }
-            .font(Font.system(.title, design: .monospaced))
-            .frame(width: 1_000.0, height: 240.0)
+            .font(Font.body.monospaced())
+            .edgesIgnoringSafeArea(.top)
             .navigationTitle("navigationTitle")
             .navigationSubtitle("navigationSubtitle")
-            .toolbar(content: {
+            .toolbar {
                 
-                ToolbarItemGroup(placement: ToolbarItemPlacement.navigation, content: {
+                ToolbarItemGroup(placement: .automatic, content: {
+                    Image(systemName: "photo.on.rectangle").imageScale(.large)
+                    Text(verbatim: "some_text")
+                })
+                
+                ToolbarItemGroup(placement: .navigation, content: {
                     Button(action: {}, label: {
-                        Text("navigation")
+                        Text(verbatim: "navigation")
                     })
                 })
                 
-                ToolbarItemGroup(placement: ToolbarItemPlacement.principal, content: {
+                ToolbarItemGroup(placement: .primaryAction, content: {
                     Button(action: {}, label: {
-                        Image(systemName: "square.fill.on.circle.fill")
-                        Text("principal")
+                        Image(systemName: "square.stack.3d.down.forward.fill")
+                        Text(verbatim: "image_button")
                     })
                 })
                 
-                ToolbarItemGroup(placement: ToolbarItemPlacement.status, content: {
+                ToolbarItemGroup(placement: .destructiveAction, content: {
                     Button(action: {}, label: {
-                        Text("status")
+                        Text(verbatim: "button")
                     })
                 })
                 
-                ToolbarItemGroup(placement: ToolbarItemPlacement.primaryAction, content: {
-                    Button(action: {}, label: {
-                        Text("primary")
+                // ToolbarItemGroup(placement: .principal, content: {
+                //    Button(action: {}, label: {
+                //        Text(verbatim: "principal")
+                //    })
+                // })
+                
+                // ToolbarItemGroup(placement: .status, content: {
+                //    Button(action: {}, label: {
+                //        Text(verbatim: "status")
+                //    })
+                // })
+                
+                // ToolbarItemGroup(placement: .confirmationAction, content: {
+                //    Button(action: {}, label: {
+                //        Text(verbatim: "confirmation")
+                //    })
+                // })
+                
+                // ToolbarItemGroup(placement: .cancellationAction, content: {
+                //    Button(action: {}, label: {
+                //        Text(verbatim: "cancel")
+                //    })
+                // })
+                
+                // ToolbarItemGroup(placement: .automatic, content: {
+                //    Button(action: {}, label: {
+                //        Text(verbatim: "automatic")
+                //    })
+                // })
+                
+                ToolbarItemGroup(placement: .automatic, content: {
+                    Picker(selection: .constant(0), content: {
+                        Text("picker_1").tag(0)
+                        Text("picker_2").tag(1)
+                        Text("picker_3").tag(2)
+                    }, label: { })
+                })
+                
+                ToolbarItemGroup(placement: .automatic, content: {
+                    Picker(selection: .constant(1), content: {
+                        Text("picker").tag(0)
+                        Text("inline").tag(1)
+                    }, label: { })
+                        .pickerStyle(InlinePickerStyle()) // same as: SegmentedPickerStyle()
+                })
+                
+                ToolbarItemGroup(placement: .automatic, content: {
+                    Menu(content: {
+                        Button(action: {}, label: { Text(verbatim: "menu_item_1") })
+                        Button(action: {}, label: { Text(verbatim: "menu_item_2") })
+                    }, label: {
+                        Text(verbatim: "menu")
                     })
                 })
                 
-                ToolbarItemGroup(placement: ToolbarItemPlacement.destructiveAction, content: {
-                    Button(action: {}, label: {
-                        Text("destructive")
-                    })
-                })
-                
-                ToolbarItemGroup(placement: ToolbarItemPlacement.confirmationAction, content: {
-                    Button(action: {}, label: {
-                        Text("confirm")
-                    })
-                })
-                
-                ToolbarItemGroup(placement: ToolbarItemPlacement.cancellationAction, content: {
-                    Button(action: {}, label: {
-                        Text("cancel")
-                    })
-                })
-                
-                ToolbarItemGroup(placement: ToolbarItemPlacement.automatic, content: {
-                    Button(action: {}, label: {
-                        Text("automatic")
-                    })
-                })
-                
-            })
-            
+            }
+            .frame(width: 920.0, height: 296.0)
             
         }
-        .windowStyle(HiddenTitleBarWindowStyle())
-        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
         
-        // WINDOW:
-        // DefaultWindowStyle 1
-        // TitleBarWindowStyle 2
-        // HiddenTitleBarWindowStyle 3
-        
-        // TOOLBAR:
-        // DefaultWindowToolbarStyle 1
-        // UnifiedWindowToolbarStyle 2
-        // ExpandedWindowToolbarStyle 3
-        // UnifiedCompactWindowToolbarStyle 4
+        .windowStyle(.automatic)
+        .windowToolbarStyle(.automatic)
         
     }
-    
 }
+
+
+// .windowStyle
+//   .automatic 1
+//   .hiddenTitleBar 2
+//   .titleBar 3
+
+// .windowToolbarStyle
+//   .automatic 1
+//   .expanded 2
+//   .unified 3
+//   .unifiedCompact 4
