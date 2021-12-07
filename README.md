@@ -1,64 +1,64 @@
 # SwiftUI .windowStyle() .windowToolbarStyle()
 
-Showcase of window and toolbar style combinations possible with SwiftUI on macOS.
+Showcase of window and toolbar styles on macOS using SwiftUI.
 
-**→ How to use:** Add the `.windowStyle()` and `.windowToolbarStyle()` modifiers to `WindowGroup` within you `App` struct: 
+**→ HOW TO:** Add the `.windowStyle()` and/or `.windowToolbarStyle()` modifiers to `WindowGroup` within you `App` struct: 
 ```swift
 WindowGroup { /* ... */ }
-  .windowStyle(DefaultWindowStyle())
-  .windowToolbarStyle(DefaultWindowToolbarStyle())
+  .windowStyle(.automatic)
+  .windowToolbarStyle(.automatic)
 ```
 
-Take a look at the included [SwiftUI file](https://github.com/martinlexow/SwiftUIWindowStyles/blob/main/SwiftUIWindowStylesApp.swift) to see how to create the toolbar etc.
+🧑‍💻 Have a look at the [SwiftUI source file](https://github.com/martinlexow/SwiftUIWindowStyles/blob/main/SwiftUIWindowStylesApp.swift) in order to see how to create the toolbar etc.
 
-If you are an AppKit developer you might find this helpful as well: [NSWindowStyles](https://github.com/lukakerr/NSWindowStyles).
+🦖 If you are an AppKit developer you might find this helpful as well: [NSWindowStyles](https://github.com/lukakerr/NSWindowStyles).
 
-Please make a pull request if you have a style to add.
+Feel free to make a pull request if you have a style to add.
 
-## DefaultWindowStyle()
+## .windowStyle(.automatic)
 
-### DefaultWindowToolbarStyle()
-![](previews/1-1.png)
+### .windowToolbarStyle(.automatic)
+![](previews/macOS12/1-1-automatic-automatic.png)
 
-### UnifiedWindowToolbarStyle()
-![](previews/1-2.png)
+### .windowToolbarStyle(.expanded)
+![](previews/macOS12/1-2-automatic-expanded.png)
 
-### ExpandedWindowToolbarStyle()
-![](previews/1-3.png)
+### .windowToolbarStyle(.unified)
+![](previews/macOS12/1-3-automatic-unified.png)
 
-### UnifiedCompactWindowToolbarStyle()
-![](previews/1-4.png)
-
-
-## TitleBarWindowStyle()
-
-### DefaultWindowToolbarStyle()
-![](previews/2-1.png)
-
-### UnifiedWindowToolbarStyle()
-![](previews/2-2.png)
-
-### ExpandedWindowToolbarStyle()
-![](previews/2-3.png)
-
-### UnifiedCompactWindowToolbarStyle()
-![](previews/2-4.png)
+### .windowToolbarStyle(.unifiedCompact)
+![](previews/macOS12/1-4-automatic-unifiedCompact.png)
 
 
-## HiddenTitleBarWindowStyle()
+## .windowStyle(.hiddenTitleBar)
 
-### DefaultWindowToolbarStyle()
-![](previews/3-1.png)
+### .windowToolbarStyle(.automatic)
+![](previews/macOS12/2-1-hiddenTitleBar-automatic.png)
 
-### UnifiedWindowToolbarStyle()
-![](previews/3-2.png)
+### .windowToolbarStyle(.expanded)
+![](previews/macOS12/2-2-hiddenTitleBar-expanded.png)
 
-### ExpandedWindowToolbarStyle()
-![](previews/3-3.png)
+### .windowToolbarStyle(.unified)
+![](previews/macOS12/2-3-hiddenTitleBar-unified.png)
 
-### UnifiedCompactWindowToolbarStyle()
-![](previews/3-4.png)
+### .windowToolbarStyle(.unifiedCompact)
+![](previews/macOS12/2-4-hiddenTitleBar-unifiedCompact.png)
 
 
-## 🌀 Support
-I’m Martin, an indie dev from Berlin. If you find this useful, please consider to support my work! You can find some great apps of mine on the [Mac App Store](https://apps.apple.com/developer/id955848754) 🌀
+## .windowStyle(.titleBar)
+
+### .windowToolbarStyle(.automatic)
+![](previews/macOS12/3-1-titleBar-automatic.png)
+
+### .windowToolbarStyle(.expanded)
+![](previews/macOS12/3-2-titleBar-expanded.png)
+
+### .windowToolbarStyle(.unified)
+![](previews/macOS12/3-3-titleBar-unified.png)
+
+### .windowToolbarStyle(.unifiedCompact)
+![](previews/macOS12/3-4-titleBar-unifiedCompact.png)
+
+
+## About
+I’m [Martin](https://martinlexow.de), an indie dev from Berlin. Enjoying my work? Have a look at some great apps of mine on the [Mac App Store](https://apps.apple.com/developer/id955848754) 🌀
